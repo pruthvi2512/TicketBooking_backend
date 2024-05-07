@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import Bookings from "../models/bookingschema";
-import Movie from "../models/MovieSchema"
-import User from "../models/userschema"
+import Bookings from "../models/bookingschema.js";
+import Movie from "../models/MovieSchema.js"
+import User from "../models/userschema.js"
  import { ObjectId } from "mongodb";
 
 export const newbooking=async(req,res)=>{
