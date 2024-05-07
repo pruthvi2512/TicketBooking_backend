@@ -49,7 +49,7 @@ app.post("/create-checkout-session",async(req,res)=>{
     res.json({id:session.id})
  
 })
-app.listen(3000,()=>{
+app.listen(process.env.PORT,()=>{
   console.log(process.env.MONGODB_PASSWORD);
   console.log("listning on port");
 });
