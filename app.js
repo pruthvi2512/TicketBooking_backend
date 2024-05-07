@@ -10,7 +10,7 @@ import Stripe from "stripe";
 import cors from "cors";
 const stripe=Stripe("sk_test_51OqVUtSIYEMswIFxNGak9plEwf3upS3EOxHeOHvVtl4l9Zyj1e9vGDKJCkK5Aq4UDqZgKhn3FRUap8BqAYEh3m7i00aVlKwbfy");
 
-
+const port=process.env.PORT||3000;
 const app=express();
 app.use(express.json());
 
@@ -49,7 +49,7 @@ app.post("/create-checkout-session",async(req,res)=>{
     res.json({id:session.id})
  
 })
-app.listen(process.env.PORT,()=>{
+app.listen(port,()=>{
   console.log(process.env.MONGODB_PASSWORD);
   console.log("listning on port");
 });
