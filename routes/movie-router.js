@@ -1,5 +1,5 @@
 import express from "express";
-import { addmovies, getallmovie, getmoviebyid } from "../controllers/movie-cont";
+import { addmovies, getallmovie, getmoviebyid } from "../controllers/movie-cont.js";
 const movierouter=express.Router();
 movierouter.post("/",addmovies);
 movierouter.get("/",getallmovie);
