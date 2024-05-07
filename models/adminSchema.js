@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Movie from "./MovieSchema"
+import Movie from "./MovieSchema.js"
 const adminSchema= new mongoose.Schema({
     
     email:{

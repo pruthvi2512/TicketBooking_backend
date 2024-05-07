@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import admin from "./adminSchema"
-import Booking from "./bookingschema"
+import admin from "./adminSchema.js"
+import Booking from "./bookingschema.js"
 const movieSchema=new mongoose.Schema({
     title: {
         type: String,
