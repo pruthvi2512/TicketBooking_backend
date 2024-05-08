@@ -64,7 +64,7 @@ export const getdetails=async(req,res)=>{
    const id= req.params.id;
    let user;
    try{
-      user= await User.find({_id:id});
+      user= await User.findById(id);
    }catch(err){
       console.log(err);
    };
