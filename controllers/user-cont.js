@@ -60,19 +60,19 @@ export const loginUser= async(req,res)=>{
      return res.status(200).json({message:"login succesful",id:presentuser._id})
 };
 
-export const getBookingofuser=async(req,res)=>{
+export const getdetails=async(req,res)=>{
    const id= req.params.id;
-   let booking;
+   let user;
    try{
-      booking= await Bookings.find({user:id});
+      user= await User.find({_id:id});
    }catch(err){
       console.log(err);
    };
 
-   if(!booking){
+   if(!user){
       res.status(400).json({message:"error"});
 
    }
 
-   return res.status(200).json(booking);
+   return res.status(200).json(user);
 };
