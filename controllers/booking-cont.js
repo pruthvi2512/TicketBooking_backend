@@ -46,7 +46,7 @@ export const getbookingById=async(req,res)=>{
          
          let booking;
          try{
-            booking=await Bookings.findById(new ObjectId(id));
+            booking=await Bookings.find({user:id});
          }catch(err){
              return console.log(err);
          }
